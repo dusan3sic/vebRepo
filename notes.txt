@@ -3,4 +3,6 @@ Back:
     -Register opcija (POST)
     -Login opcija (GET)**
     -Daj mi trenutni highscore (GET)
+		1. Za username: highscore.php?username=dusan3sic
+		2. Za sve: highscore.php
     -Postavi novi highscore (POST)
