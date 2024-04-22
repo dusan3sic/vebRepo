@@ -1,9 +1,21 @@
-var users = [
-    { username: 'user1', points: 100 },
-    { username: 'user2', points: 75 },
-    { username: 'user3', points: 120 },
-    { username: 'user4', points: 90 }
-];
+fetch('link')
+  .then(response => {
+    if (response.ok) {
+      // Parse the JSON response body
+      return response.json();
+    } else {
+      // If response status is not OK, throw an error
+      throw new Error('Network response was not ok.');
+    }
+  })
+  .then(data => {
+    // Process the retrieved data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the fetch
+    console.error('Fetch error:', error);
+  });
 
 users.sort((a, b) => b.points - a.points);
 
