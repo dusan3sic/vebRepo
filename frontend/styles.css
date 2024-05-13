@@ -1,12 +1,41 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    background: #E3F2FD;
 }
+
+#title {
+    text-align: center;
+    font-size: 100px;
+    color: #B8C6DC;
+    text-shadow:
+        1px 1px 0 grey,
+        -1px 1px 0 grey,
+        -1px -1px 0 grey,
+        1px -1px 0 grey;
+}
+
+#leaderboard {
+    text-align: center;
+    justify-content: center;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    color: #B8C6DC;
+    text-shadow:
+        1px 1px 0 grey,
+        -1px 1px 0 grey,
+        -1px -1px 0 grey,
+        1px -1px 0 grey;
+}
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
 }

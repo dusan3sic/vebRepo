@@ -51,11 +51,11 @@ else {
 
 
 if ($result->num_rows > 0) {
-    $rows = array(); // Initialize an array to store all rows
+    $rows = array();
     while ($row = $result->fetch_assoc()) {
-        $rows[] = $row; // Append each row to the array
+        $rows[] = $row;
     }
-    echo json_encode($rows); // Encode the array as JSON and echo it
+    echo json_encode($rows);
 } else {
     echo json_encode(["error" => "No scores found"]);
 }

@@ -12,12 +12,18 @@ if ($conn->connect_error) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "INSERT INTO igrac (id, username, password, highscore) VALUES (0, '$username', '$password', 0)";
+$query = "SELECT * FROM igrac WHERE username = '$username' OR password = '$password'";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Registracija uspesna";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+$result = mysqli_query($conn, $query);
+
+if (mysqli_num_rows($result) == 0) {
+    $sql = "INSERT INTO igrac (username, password, highscore) VALUES ('$username', '$password', 0)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Registracija uspesna";
+    }
+}else {
+    echo "Korisnicko ime ili lozinka vec postoji";
 }
 
 $conn->close();
