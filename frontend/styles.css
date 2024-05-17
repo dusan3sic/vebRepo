@@ -5,6 +5,28 @@
     background: #E3F2FD;
 }
 
+#login {
+        text-shadow:
+        1px 1px 0 grey,
+        -1px 1px 0 grey,
+        -1px -1px 0 grey,
+        1px -1px 0 grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+#register {
+        text-shadow:
+        1px 1px 0 grey,
+        -1px 1px 0 grey,
+        -1px -1px 0 grey,
+        1px -1px 0 grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
 #title {
     text-align: center;
     font-size: 100px;
